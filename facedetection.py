@@ -8,10 +8,10 @@ from PIL import Image
 
 def detect_faces_in_dataset():
     face_classifier = cv2.CascadeClassifier(
-        "./haarcascade_frontalface_default.xml")
+        "haarcascade_frontalface_default.xml")
 
-    dataset_dir = "./static/Images"  # Directory containing the images
-    face_dataset_dir = "./static/face_dataset"  # Directory to save the detected face images
+    dataset_dir = "static/Images"  # Directory containing the images
+    face_dataset_dir = "static/face_dataset"  # Directory to save the detected face images
 
     if not os.path.exists(face_dataset_dir):
         os.makedirs(face_dataset_dir)
@@ -38,7 +38,7 @@ def detect_faces_in_dataset():
     cv2.destroyAllWindows()
 
 def train_classifier():
-    dataset_dir = "./static/face_dataset"
+    dataset_dir = "static/face_dataset"
 
     path = [os.path.join(dataset_dir, f) for f in os.listdir(dataset_dir)]
     faces = []
@@ -56,6 +56,6 @@ def train_classifier():
     # Train the classifier and save
     clf = cv2.face.LBPHFaceRecognizer_create()
     clf.train(faces, ids)
-    clf.write("./classifier.xml")
+    clf.write("classifier.xml")
 
     return {'status': 'success'}

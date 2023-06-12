@@ -312,7 +312,7 @@ def face_recognition():  # generate frame by frame from camera
     faceCascade = cv2.CascadeClassifier(
         "haarcascade_frontalface_default.xml")
     clf = cv2.face.LBPHFaceRecognizer_create()
-    clf.read("../classifier.xml")
+    clf.read("classifier.xml")
 
     wCam, hCam = 400, 400
 
