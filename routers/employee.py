@@ -15,7 +15,7 @@ router = APIRouter(
     tags=['Employees']
 )
 
-router.mount("/static", StaticFiles(directory="static"), name="static")
+router.mount("../static", StaticFiles(directory="static"), name="static")
 
 
 # Show all employees
@@ -178,7 +178,7 @@ async def upload_images(
     db: Session = Depends(get_db),
     current_admin: schemas.Admin = Depends(get_current_admin)
 ):
-    FILEPATH = "./static/images/"
+    FILEPATH = "../static/images/"
     allowed_extensions = ["png", "jpg", "jpeg"]
     uploaded_images = []
 
