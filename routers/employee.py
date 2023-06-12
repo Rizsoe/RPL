@@ -15,9 +15,6 @@ router = APIRouter(
     tags=['Employees']
 )
 
-router.mount("../static", StaticFiles(directory="static"), name="static")
-
-
 # Show all employees
 @router.get('/', response_model=List[schemas.AllEmployee], status_code=status.HTTP_200_OK)
 def show_all(
