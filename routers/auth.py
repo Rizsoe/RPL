@@ -1,6 +1,4 @@
-
-from typing import Annotated
-from fastapi import APIRouter, Depends, HTTPException, Response, status
+from fastapi import APIRouter, Depends, HTTPException,status
 from fastapi.security import OAuth2PasswordRequestForm
 import schemas.employee as schemas
 from config.db import  get_db
@@ -8,9 +6,7 @@ import models.employee as models
 from sqlalchemy.orm import Session
 from hashing import Hash
 import JWTtoken
-from oauth2 import get_current_active_user, get_current_admin
-from jose import jwt
-from fastapi_jwt_auth import AuthJWT
+from oauth2 import get_current_active_user
 
 router = APIRouter(
     prefix='/login',

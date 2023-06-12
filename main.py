@@ -1,13 +1,11 @@
-from datetime import date, datetime
+from datetime import datetime
 import time
-from typing import List
 
 import pytz
 import models.employee as models
 import schemas.employee as schemas
-from config.db import SessionLocal, engine, get_db
-from fastapi import FastAPI, HTTPException, Response,status, Depends
-from sqlalchemy.orm import Session
+from config.db import engine
+from fastapi import FastAPI, status
 import routers.employee as employee
 import routers.status as status
 import routers.admin as admin
@@ -16,6 +14,11 @@ import routers.job as job
 import routers.attendance as attendance
 import routers.attendance_status as attendance_status
 from fastapi.middleware.cors import CORSMiddleware
+import cv2
+from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+import cv2
+import mysql.connector
 
 
 app= FastAPI()
@@ -51,14 +54,7 @@ app.include_router(attendance_status.router)
 
 app.include_router(attendance.router)
 
-import cv2
-import os
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
-import cv2
-import numpy as np
-from PIL import Image
-import mysql.connector
+
 
 # def detect_faces_in_dataset():
 #     face_classifier = cv2.CascadeClassifier(

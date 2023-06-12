@@ -1,6 +1,6 @@
 from datetime import datetime,date
 from typing import List, Optional
-from pydantic import BaseModel, DateTimeError,Field, validator
+from pydantic import BaseModel, validator
 import pytz
 # from fastapi_utils.openapi import schema
 tz = pytz.timezone('Asia/Singapore')

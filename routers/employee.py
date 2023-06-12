@@ -1,6 +1,5 @@
 from typing import List
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status, Response
-from pydantic import BaseModel
 from sqlalchemy import func
 import schemas.employee as schemas
 from config.db import get_db

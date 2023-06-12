@@ -1,6 +1,5 @@
 import cv2
 import os
-from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 import cv2
 import numpy as np

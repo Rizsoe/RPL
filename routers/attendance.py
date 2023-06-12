@@ -1,7 +1,5 @@
-from datetime import datetime, date
-from typing import List, Optional
+from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, status, Response
-import pytz
 import schemas.employee as schemas
 from config.db import  get_db
 import models.employee as models
