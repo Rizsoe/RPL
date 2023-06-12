@@ -56,6 +56,6 @@ def train_classifier():
     # Train the classifier and save
     clf = cv2.face.LBPHFaceRecognizer_create()
     clf.train(faces, ids)
-    clf.write("classifier.xml")
+    clf.write("../classifier.xml")
 
     return {'status': 'success'}
