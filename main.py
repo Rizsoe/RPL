@@ -116,7 +116,6 @@ mydb = mysql.connector.connect(
     user="root",
     password="5awcXt09ZHlr1xwxZLie",
     database="railway",
-    host='containers-us-west-110.railway.app',
     port= 6395
 )
 
