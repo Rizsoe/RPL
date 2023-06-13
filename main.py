@@ -112,10 +112,12 @@ app.include_router(attendance.router)
 
 # Membuat koneksi ke database
 mydb = mysql.connector.connect(
-    host="localhost",
+    host="containers-us-west-110.railway.app",
     user="root",
-    password="",
-    database="absensi_db"
+    password="5awcXt09ZHlr1xwxZLie",
+    database="railway",
+    host='containers-us-west-110.railway.app',
+    port= 6395
 )
 
 # Mendapatkan cursor untuk menjalankan query
