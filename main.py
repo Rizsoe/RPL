@@ -341,9 +341,6 @@ async def video_feed():
     justscanned=False
     return StreamingResponse(face_recognition(), media_type='multipart/x-mixed-replace; boundary=frame')
 
-if __name__ == "__main__":
-    uvicorn.run(app, host='0.0.0.0', port=8000)
-
 
 
 
