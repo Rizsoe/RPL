@@ -2,6 +2,7 @@ from datetime import datetime
 import time
 
 import pytz
+import uvicorn
 import models.employee as models
 import schemas.employee as schemas
 from config.db import engine
@@ -339,6 +340,9 @@ async def video_feed():
     global justscanned
     justscanned=False
     return StreamingResponse(face_recognition(), media_type='multipart/x-mixed-replace; boundary=frame')
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='0.0.0.0', port=8000)
 
 
 
