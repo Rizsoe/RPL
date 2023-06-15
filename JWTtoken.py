@@ -11,7 +11,7 @@ SECRET_KEY = "P1aNYGQP7at5pTa4WTYiUW0fPgmH/Gy2yC/wVGg/vfA"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
-def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
+def create_access_token(data: dict, expires_delta: timedelta or None = None):
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.now(tz=tz) + expires_delta

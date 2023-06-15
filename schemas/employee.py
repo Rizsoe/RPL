@@ -93,7 +93,7 @@ class Token(BaseModel):
 
 
 class TokenData(BaseModel):
-   username: Optional[str] = None
+   username: str or None = None
 
 class UserInDB(Admin):
     hashed_password: str
