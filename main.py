@@ -29,8 +29,10 @@ now = datetime.now(pytz.timezone('Asia/Singapore'))
 # Setup CORS middleware
 origins = [
     "http://localhost",
-    "https://admin-production-b634.up.railway.app/"
-    "https://employee-production.up.railway.app/"
+    "https://localhost",
+    "https://admin-production-b634.up.railway.app/",
+    "https://employee-production.up.railway.app/",
+    "http://rpl-production.up.railway.app/"
     "https://rpl-production.up.railway.app/"
 ]
 
